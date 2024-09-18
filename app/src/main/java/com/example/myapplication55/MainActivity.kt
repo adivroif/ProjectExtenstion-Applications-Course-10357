@@ -167,6 +167,7 @@ class MainActivity : AppCompatActivity() {
 
         refreshUI()
         }
+        runOfMatch.cancel();
     }
 
     private fun checkCrash(iteration : Int) {
