@@ -38,6 +38,8 @@ class HighScore_Fragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_high_score_, container, false)
         findViews(view)
+        main_LST_scores.adapter = adapter
+        main_LST_scores.layoutManager = LinearLayoutManager(context)
         return view
     }
 

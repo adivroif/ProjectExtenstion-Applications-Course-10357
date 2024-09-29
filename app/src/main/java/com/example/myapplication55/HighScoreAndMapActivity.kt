@@ -43,7 +43,7 @@ class HighScoreAndMapActivity : AppCompatActivity() {
         high_score_fragment = HighScore_Fragment()
         high_score_fragment.callbackHighScoreItemClicked=( object : Callback_HighScore_Item_Clicked{
             override fun highScoreItemClicked(lat: Double, lng: Double) {
-                high_map_fragment.moveToLocation(lat,lng)
+                high_map_fragment.moveToLocation(lat, lng)
                 }
             })
 
