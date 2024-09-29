@@ -1,19 +1,10 @@
 package com.example.myapplication55.logic
 
-import android.view.View
-import androidx.lifecycle.lifecycleScope
-import com.example.myapplication55.utilities.Constants
-import com.google.android.material.imageview.ShapeableImageView
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlin.random.Random
-
 class GameManager(val lifeCount: Int = 3) {
-    var currentIndexOfCar = 1
-
+    var currentIndexOfCar = 0
+    var startIndexOfCar = 0
     var numberOfCrashs:Int = 0
-
+    var score:Int = 0
     val isGameLost: Boolean
         get() = numberOfCrashs == lifeCount
 
@@ -23,7 +14,11 @@ class GameManager(val lifeCount: Int = 3) {
     }
 
     fun moveCarRight() {
-        if(currentIndexOfCar < 2)
+        if(currentIndexOfCar < 4)
             currentIndexOfCar+=1
+    }
+
+    fun addScore() {
+        score+=10
     }
 }

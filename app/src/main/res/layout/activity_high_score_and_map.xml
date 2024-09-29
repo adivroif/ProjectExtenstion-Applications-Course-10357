@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HighScoreAndMapActivity">
+
+<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/return_to_Main"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        app:icon="@drawable/right_arrow_1_svgrepo_com"
+        android:layout_marginTop="10dp"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <FrameLayout
+        android:id="@+id/fragment_score"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding = "@dimen/padding_of_frame" />
+
+    <FrameLayout
+        android:id="@+id/fragment_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:padding = "@dimen/padding_of_frame" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    tools:context=".MenuActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="@dimen/width_for_all_buttons"
+        android:layout_height="@dimen/height_for_all_buttons"
+        android:id="@+id/go_to_high_score_table"
+        android:text="@string/go_to_high_score_table"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_of_high_score_btn"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_of_button_mode"
+        android:textStyle="bold"
+        />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_below="@id/go_to_high_score_table"
+            android:layout_height="@dimen/margin_of_text_menu1"
+            android:layout_centerInParent="true"
+            android:id="@+id/textView_for_menu"
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/width_for_all_buttons"
+            android:layout_height="@dimen/height_for_all_buttons"
+            android:id="@+id/main_sensor_mode"
+            android:backgroundTint="@color/white"
+            android:layout_centerInParent="true"
+            android:textColor="@color/blue"
+            android:layout_below="@id/textView_for_menu"
+            android:text="@string/sensor_mode"
+            android:textSize="@dimen/text_of_button_mode"
+            android:textStyle="bold"
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_below="@id/main_sensor_mode"
+            android:layout_height="@dimen/margin_of_text_menu1"
+            android:layout_centerInParent="true"
+            android:id="@+id/textView_for_menu1"
+
+        />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/width_for_all_buttons"
+            android:layout_height="@dimen/height_for_all_buttons"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/blue"
+            android:id="@+id/main_button_mode"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/textView_for_menu1"
+            android:text="@string/button_mode"
+            android:textSize="@dimen/text_of_button_mode"
+            android:textStyle="bold"      />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="@dimen/width_of_slow_or_fast"
+        android:layout_height="@dimen/height_for_all_buttons"
+        android:id="@+id/fast_or_slow"
+        android:layout_below="@id/main_button_mode"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/margin_of_slow_or_fast"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/width_for_all_buttons"
+            android:layout_height="@dimen/height_for_all_buttons"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/blue"
+            android:layout_weight="1"
+            android:id="@+id/main_fast_mode"
+            android:text="@string/fast_mode"
+            android:textSize="@dimen/text_size_for_slow_or_fast_mode"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="5dp"
+            android:layout_height="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="@dimen/width_for_all_buttons"
+            android:layout_height="@dimen/height_for_all_buttons"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/blue"
+            android:id="@+id/main_slow_mode"
+            android:layout_weight="1"
+            android:text="@string/slow_mode"
+            android:textSize="@dimen/text_size_for_slow_or_fast_mode"
+            android:textStyle="bold"            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

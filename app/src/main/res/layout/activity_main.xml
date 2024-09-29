@@ -5,8 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/images"
     tools:context=".MainActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/backgroundMainImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/images"
+        />
 
 <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="@dimen/LL_main_width_hearts"
@@ -24,7 +32,7 @@
     android:layout_centerHorizontal="true"
     android:layout_weight="1"
     app:srcCompat="@drawable/heart"
-    />
+     />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/heart1_main"
@@ -45,11 +53,23 @@
         android:layout_weight="1"
         app:srcCompat="@drawable/heart"
         />
-
 </androidx.appcompat.widget.LinearLayoutCompat>
 
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/_0"
+        android:textStyle="bold"
+        android:textSize="@dimen/size_of_score"
+        android:layout_marginLeft="@dimen/margin_of_score"
+        android:layout_marginTop="@dimen/margin_of_score"/>
+
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="300dp"
+        android:layout_width="@dimen/width_of_cars"
         android:layout_height="@dimen/LL_main_height_hearts"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/margin_bottom_for_cars"
@@ -76,6 +96,26 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/car_main2"
+            android:layout_width="@dimen/margin_main_for_car"
+            android:layout_height="@dimen/margin_main_for_car"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_bottom_for_car"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/car_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/car_main3"
+            android:layout_width="@dimen/margin_main_for_car"
+            android:layout_height="@dimen/margin_main_for_car"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_bottom_for_car"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/car_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/car_main4"
             android:layout_width="@dimen/margin_main_for_car"
             android:layout_height="@dimen/margin_main_for_car"
             android:layout_alignParentBottom="true"
@@ -120,120 +160,414 @@
         app:icon="@drawable/right_arrow_1_svgrepo_com"/>
 
     <GridLayout
-        android:id="@+id/gridLayout"
+        android:id="@+id/gridLayout1"
         android:layout_width="@dimen/width_of_matrix_rocks"
         android:layout_height="@dimen/height_of_matrix_rocks"
-        android:layout_centerInParent="true"
-        android:columnCount="3"
+        android:columnCount="5"
         android:rowCount="4">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock0"
+            android:id="@+id/coin00"
             android:layout_row="0"
             android:layout_column="0"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock1"
+            android:id="@+id/coin01"
             android:layout_row="0"
             android:layout_column="1"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock2"
+            android:id="@+id/coin02"
             android:layout_row="0"
             android:layout_column="2"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock3"
+            android:id="@+id/coin03"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/main_coin_width"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:id="@+id/coin04"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/main_coin_width"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:id="@+id/coin10"
             android:layout_row="1"
             android:layout_column="0"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock4"
+            android:id="@+id/coin11"
             android:layout_row="1"
             android:layout_column="1"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock5"
+            android:id="@+id/coin12"
             android:layout_row="1"
             android:layout_column="2"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock6"
+            android:id="@+id/coin13"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/main_coin_width"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:id="@+id/coin14"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/main_coin_width"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:id="@+id/coin20"
             android:layout_row="2"
             android:layout_column="0"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock7"
+            android:id="@+id/coin21"
             android:layout_row="2"
             android:layout_column="1"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock8"
+            android:id="@+id/coin22"
             android:layout_row="2"
             android:layout_column="2"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/main_coin_width"
             android:layout_height="@dimen/height_for_each_rock"
-            android:id="@+id/rock9"
+            android:id="@+id/coin23"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/main_coin_width"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:id="@+id/coin24"
+            android:layout_row="2"
+            android:layout_column="4"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/main_coin_width"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:id="@+id/coin30"
             android:layout_row="3"
             android:layout_column="0"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com"/>
+            android:src="@drawable/coin_svgrepo_com"/>
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
-            android:id="@+id/rock10"
+            android:layout_width="@dimen/main_coin_width"
+            android:id="@+id/coin31"
             android:layout_height="@dimen/height_for_each_rock"
             android:layout_row="3"
             android:layout_column="1"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="wrap_content"
-            android:id="@+id/rock11"
+            android:layout_width="@dimen/main_coin_width"
+            android:id="@+id/coin32"
             android:layout_height="@dimen/height_for_each_rock"
             android:layout_row="3"
             android:layout_column="2"
             android:layout_margin="@dimen/margin_in_matrix"
-            android:src="@drawable/rock_svgrepo_com" />
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/main_coin_width"
+            android:id="@+id/coin33"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/coin34"
+            android:layout_width="@dimen/main_coin_width"
+            android:layout_height="@dimen/height_for_each_rock"
+            android:layout_row="3"
+            android:layout_column="4"
+            android:layout_margin="@dimen/margin_in_matrix"
+            android:src="@drawable/coin_svgrepo_com" />
+    </GridLayout>
+
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="@dimen/width_of_matrix_rocks"
+            android:layout_height="@dimen/height_of_matrix_rocks"
+            android:columnCount="5"
+            android:rowCount="4">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock00"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock01"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock02"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock03"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock04"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock10"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock11"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock12"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock13"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock14"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="1"
+                android:layout_column="4"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock20"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock21"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock22"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock23"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock24"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="2"
+                android:layout_column="4"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock30"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock31"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock32"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock33"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/rock34"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_for_each_rock"
+                android:layout_row="3"
+                android:layout_column="4"
+                android:layout_margin="@dimen/margin_in_matrix"
+                android:src="@drawable/rock_svgrepo_com" />
 
     </GridLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/main_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Enter Your Name"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_submit"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:textSize="16sp"
+        android:textColor="@color/blue"
+        android:backgroundTint="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/main_player_name"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:text="SUBMIT"
+        app:cornerRadius="10dp"
+        >
+
+    </com.google.android.material.button.MaterialButton>
+
 </RelativeLayout>
